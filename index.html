@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juiceber - Fresh Juices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* កំណត់ Font និងស្ទីលទូទៅ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+    background-color: #ffffff;
+}
+
+/* ពណ៌ Background សម្រាប់ប្រភេទកាតនីមួយៗ (Categories) */
+.card-orange {
+    background: linear-gradient(135deg, #fcd3a1, #f9a03f);
+}
+
+.card-strawberry {
+    background: linear-gradient(135deg, #ffb3ba, #ff4d6d);
+}
+
+.card-blackberry {
+    background: linear-gradient(135deg, #d6b4fc, #8a2be2);
+}
+
+.card-lemon {
+    background: linear-gradient(135deg, #c1f0c1, #52c452);
+}
+
+/* ស្ទីលសម្រាប់ Category Card */
+.category-card {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* កម្ពស់កាត */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ស្ទីលសម្រាប់កាតផលិតផល (Product Cards) */
+.product-card {
+    height: 280px; /* កម្ពស់រូបភាពផលិតផល */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ប៊ូតុង Our All Products */
+.btn-all-products {
+    background-color: #b71c1c; /* ពណ៌ក្រហមក្រម៉ៅ */
+    border: none;
+    font-size: 0.9rem;
+}
+
+.btn-all-products:hover {
+    background-color: #801010;
+}
+</style>
+<body>
+
+    <section class="categories-section text-center py-5">
+        <div class="container">
+            <span class="text-danger small fw-bold">Our Popular Categories</span>
+            <h2 class="fw-bold mt-1 mb-3">Healthy Living, <span class="text-danger">Freshly</span> Juiced</h2>
+            <p class="text-muted mx-auto" style="max-width: 600px;">
+                Choose from Juiceber's most-loved categories and discover the perfect juice to match your mood and lifestyle.
+            </p>
+
+            <div class="row g-4 mt-4 justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div class="category-card card-orange p-4 rounded-4">
+                        <img src="path-to-orange-juice-image.png" alt="Orange Juice" class="img-fluid mb-3">
+                    </div>
+                    <h5 class="fw-bold mt-3">Orange Juice</h5>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card card-strawberry p-4 rounded-4">
+                        <img src="path-to-strawberry-juice-image.png" alt="Strawberry Juice" class="img-fluid mb-3">
+                    </div>
+                    <h5 class="fw-bold mt-3">Strawberry Juice</h5>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card card-blackberry p-4 rounded-4">
+                        <img src="path-to-blackberry-juice-image.png" alt="Blackberry Juice" class="img-fluid mb-3">
+                    </div>
+                    <h5 class="fw-bold mt-3">Blackberry Juice</h5>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card card-lemon p-4 rounded-4">
+                        <img src="path-to-lemon-juice-image.png" alt="Lemon Juice" class="img-fluid mb-3">
+                    </div>
+                    <h5 class="fw-bold mt-3">Lemon Juice</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-light my-5">
+
+    <section class="products-section text-center pb-5">
+        <div class="container">
+            <span class="text-danger small fw-bold">Popular Products</span>
+            <h2 class="fw-bold mt-1 mb-3">Our Most Loved Juices <span class="text-danger">Fresh</span> & Flavorful</h2>
+            <p class="text-muted mx-auto" style="max-width: 600px;">
+                Discover Juiceber's most loved juices, packed with freshness, flavor, and natural goodness to energize and refresh you every day.
+            </p>
+
+            <div class="row g-4 mt-4">
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product1.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$50.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product2.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$40.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product3.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$40.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product4.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$50.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product5.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$60.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product6.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$50.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product7.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$60.00</span>
+                </div>
+
+                <div class="col-6 col-md-3 text-start">
+                    <div class="product-card rounded-4 overflow-hidden mb-2">
+                        <img src="product8.jpg" alt="Juice" class="img-fluid w-100">
+                    </div>
+                    <h6 class="fw-bold mb-1">Your Brand</h6>
+                    <span class="text-danger small">$40.00</span>
+                </div>
+
+            </div>
+
+            <div class="mt-5">
+                <a href="#" class="btn btn-danger btn-all-products px-4 py-2 rounded-pill fw-bold">
+                    Our All Products <span class="ms-2">➔</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
